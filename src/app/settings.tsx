@@ -1,6 +1,8 @@
 import * as DocumentPicker from "expo-document-picker";
+import Constants from "expo-constants";
 import { File } from "expo-file-system";
 import { SymbolView } from "expo-symbols";
+import * as Updates from "expo-updates";
 import { useState } from "react";
 import {
   Platform,
@@ -22,6 +24,21 @@ import { parseOpml } from "@/lib/parse-opml";
 
 function errorMessage(error: unknown): string {
   return error instanceof Error ? error.message : String(error);
+}
+
+/**
+ * Version line shown at the bottom of Settings. Shows which OTA update
+ * (if any) is running, so you can confirm EAS Update delivered it.
+ */
+function buildInfo(): string {
+  const version = Constants.expoConfig?.version ?? "?";
+  if (!Updates.isEnabled) {
+    return `v${version} · updates off`;
+  }
+  const source = Updates.isEmbeddedLaunch
+    ? "built-in"
+    : `update ${Updates.updateId?.slice(0, 8)} · ${Updates.createdAt?.toLocaleString()}`;
+  return `v${version} · ${Updates.channel ?? "no channel"} · ${source}`;
 }
 
 type PickedFile = { text: () => Promise<string> };
@@ -233,6 +250,14 @@ export default function SettingsScreen() {
               ))
             )}
           </ThemedView>
+
+          <ThemedText
+            type="small"
+            themeColor="textSecondary"
+            style={styles.centerText}
+          >
+            {buildInfo()}
+          </ThemedText>
         </ThemedView>
       </ScrollView>
     </ThemedView>
