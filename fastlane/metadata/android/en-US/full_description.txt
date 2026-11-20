@@ -1,0 +1,13 @@
+RSSReels shows the articles from your RSS feeds as a vertical reel: one article per screen, with its image, title and summary. Swipe up for the next one.
+
+<b>Features</b>
+<ul>
+<li>Supports RSS 2.0, Atom and JSON Feed</li>
+<li>Add a feed by pasting a site or feed address — RSSReels finds the feed for you</li>
+<li>Import your subscriptions from an OPML file</li>
+<li>Tap an article to open it, double-tap to save it</li>
+<li>Pause or remove feeds at any time</li>
+</ul>
+
+<b>Private by design</b>
+Your feeds and articles are stored only on your device. There is no account, no analytics and no tracking — the app only contacts the sites whose feeds you subscribe to.
