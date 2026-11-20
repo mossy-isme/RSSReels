@@ -1,0 +1,46 @@
+# Runs on every push to the expo-updates branch.
+#
+# If a production Android build already exists for the current native
+# code (same fingerprint), the JS changes ship as an over-the-air update
+# on the production channel. If native code changed, a new production
+# build is made instead.
+name: Release
+
+on:
+  push:
+    branches: ['expo-updates']
+
+jobs:
+  fingerprint:
+    name: Fingerprint
+    type: fingerprint
+    environment: production
+
+  get_android_build:
+    name: Find matching Android build
+    needs: [fingerprint]
+    type: get-build
+    params:
+      platform: android
+      profile: production
+      fingerprint_hash: ${{ needs.fingerprint.outputs.android_fingerprint_hash }}
+      wait_for_in_progress: true
+
+  build_android:
+    name: Build Android
+    needs: [get_android_build]
+    if: ${{ !needs.get_android_build.outputs.build_id }}
+    type: build
+    params:
+      platform: android
+      profile: production
+
+  publish_android_update:
+    name: Publish Android update
+    needs: [get_android_build]
+    if: ${{ needs.get_android_build.outputs.build_id }}
+    type: update
+    environment: production
+    params:
+      platform: android
+      channel: production
