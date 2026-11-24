@@ -3,6 +3,7 @@ RSSReels shows the articles from your RSS feeds as a vertical reel: one article 
 <b>Features</b>
 <ul>
 <li>Supports RSS 2.0, Atom and JSON Feed</li>
+<li>Explore a curated directory of news, tech, science, sport and culture feeds, filtered by topic and region</li>
 <li>Add a feed by pasting a site or feed address — RSSReels finds the feed for you</li>
 <li>Import your subscriptions from an OPML file</li>
 <li>Tap an article to open it, double-tap to save it</li>
@@ -10,4 +11,4 @@ RSSReels shows the articles from your RSS feeds as a vertical reel: one article 
 </ul>
 
 <b>Private by design</b>
-Your feeds and articles are stored only on your device. There is no account, no analytics and no tracking — the app only contacts the sites whose feeds you subscribe to.
+Your feeds and articles are stored only on your device. There is no account, no analytics and no tracking. The app only contacts the sites whose feeds you add or preview, plus GitHub to download the latest Explore directory.
