@@ -1,0 +1,422 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-24T00:00:00Z",
+  "categories": [
+    "News",
+    "Technology",
+    "Science",
+    "Business",
+    "Sport",
+    "Culture",
+    "Gaming",
+    "Environment",
+    "Health",
+    "Security",
+    "Design",
+    "Food",
+    "Lifestyle"
+  ],
+  "regions": {
+    "global": "Global",
+    "au": "Australia",
+    "nz": "New Zealand",
+    "uk": "UK",
+    "us": "US",
+    "ca": "Canada",
+    "eu": "Europe"
+  },
+  "feeds": [
+    {
+      "title": "ABC News — Just In",
+      "url": "https://www.abc.net.au/news/feed/51120/rss.xml",
+      "site": "https://www.abc.net.au/news",
+      "description": "The latest stories from Australia's public broadcaster.",
+      "category": "News",
+      "region": "au"
+    },
+    {
+      "title": "SBS News — Top Stories",
+      "url": "https://www.sbs.com.au/news/feed",
+      "site": "https://www.sbs.com.au/news",
+      "description": "Australian and world news with a multicultural focus.",
+      "category": "News",
+      "region": "au"
+    },
+    {
+      "title": "The Conversation (AU)",
+      "url": "https://theconversation.com/au/articles.atom",
+      "site": "https://theconversation.com/au",
+      "description": "Analysis and explainers written by academics and researchers.",
+      "category": "News",
+      "region": "au"
+    },
+    {
+      "title": "RNZ — New Zealand Headlines",
+      "url": "https://www.rnz.co.nz/rss/national.xml",
+      "site": "https://www.rnz.co.nz",
+      "description": "National news from Radio New Zealand.",
+      "category": "News",
+      "region": "nz"
+    },
+    {
+      "title": "BBC News — World",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+      "site": "https://www.bbc.co.uk/news",
+      "description": "International headlines from the BBC.",
+      "category": "News",
+      "region": "uk"
+    },
+    {
+      "title": "The Economist — Latest",
+      "url": "https://www.economist.com/latest/rss.xml",
+      "site": "https://www.economist.com",
+      "description": "World affairs, politics and economics.",
+      "category": "News",
+      "region": "uk"
+    },
+    {
+      "title": "NPR News",
+      "url": "https://feeds.npr.org/1001/rss.xml",
+      "site": "https://www.npr.org",
+      "description": "Top stories from US public radio.",
+      "category": "News",
+      "region": "us"
+    },
+    {
+      "title": "The New York Times — World",
+      "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+      "site": "https://www.nytimes.com",
+      "description": "World news from The New York Times.",
+      "category": "News",
+      "region": "us"
+    },
+    {
+      "title": "Vox",
+      "url": "https://www.vox.com/rss/index.xml",
+      "site": "https://www.vox.com",
+      "description": "Explanatory journalism on politics, policy and culture.",
+      "category": "News",
+      "region": "us"
+    },
+    {
+      "title": "CBC — Top Stories",
+      "url": "https://www.cbc.ca/webfeed/rss/rss-topstories",
+      "site": "https://www.cbc.ca/news",
+      "description": "Headlines from Canada's public broadcaster.",
+      "category": "News",
+      "region": "ca"
+    },
+    {
+      "title": "France 24",
+      "url": "https://www.france24.com/en/rss",
+      "site": "https://www.france24.com/en",
+      "description": "International news in English from a French perspective.",
+      "category": "News",
+      "region": "eu"
+    },
+    {
+      "title": "Al Jazeera",
+      "url": "https://www.aljazeera.com/xml/rss/all.xml",
+      "site": "https://www.aljazeera.com",
+      "description": "Global news with deep coverage of the Middle East.",
+      "category": "News",
+      "region": "global"
+    },
+    {
+      "title": "The Verge",
+      "url": "https://www.theverge.com/rss/index.xml",
+      "site": "https://www.theverge.com",
+      "description": "Tech, gadgets, science and culture.",
+      "category": "Technology",
+      "region": "us"
+    },
+    {
+      "title": "Ars Technica",
+      "url": "https://feeds.arstechnica.com/arstechnica/index",
+      "site": "https://arstechnica.com",
+      "description": "In-depth technology, science and policy reporting.",
+      "category": "Technology",
+      "region": "us"
+    },
+    {
+      "title": "TechCrunch",
+      "url": "https://techcrunch.com/feed/",
+      "site": "https://techcrunch.com",
+      "description": "Startups, venture capital and the tech industry.",
+      "category": "Technology",
+      "region": "us"
+    },
+    {
+      "title": "Wired",
+      "url": "https://www.wired.com/feed/rss",
+      "site": "https://www.wired.com",
+      "description": "How technology is changing the world.",
+      "category": "Technology",
+      "region": "us"
+    },
+    {
+      "title": "Engadget",
+      "url": "https://www.engadget.com/rss.xml",
+      "site": "https://www.engadget.com",
+      "description": "Consumer tech news and reviews.",
+      "category": "Technology",
+      "region": "us"
+    },
+    {
+      "title": "The Register",
+      "url": "https://www.theregister.com/headlines.atom",
+      "site": "https://www.theregister.com",
+      "description": "Irreverent enterprise IT and tech news.",
+      "category": "Technology",
+      "region": "uk"
+    },
+    {
+      "title": "BBC News — Technology",
+      "url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
+      "site": "https://www.bbc.co.uk/news",
+      "description": "Technology headlines from the BBC.",
+      "category": "Technology",
+      "region": "uk"
+    },
+    {
+      "title": "NPR — Technology",
+      "url": "https://www.npr.org/rss/rss.php?id=1019",
+      "site": "https://www.npr.org",
+      "description": "Technology stories from NPR.",
+      "category": "Technology",
+      "region": "us"
+    },
+    {
+      "title": "Hacker News — Front Page",
+      "url": "https://hnrss.org/frontpage",
+      "site": "https://news.ycombinator.com",
+      "description": "What programmers and founders are reading today.",
+      "category": "Technology",
+      "region": "global"
+    },
+    {
+      "title": "The GitHub Blog",
+      "url": "https://github.blog/feed/",
+      "site": "https://github.blog",
+      "description": "Engineering, open source and GitHub product news.",
+      "category": "Technology",
+      "region": "global"
+    },
+    {
+      "title": "Electrek",
+      "url": "https://electrek.co/feed/",
+      "site": "https://electrek.co",
+      "description": "Electric vehicles and clean transport.",
+      "category": "Technology",
+      "region": "global"
+    },
+    {
+      "title": "Quanta Magazine",
+      "url": "https://api.quantamagazine.org/feed/",
+      "site": "https://www.quantamagazine.org",
+      "description": "Maths, physics, biology and computer science explained.",
+      "category": "Science",
+      "region": "global"
+    },
+    {
+      "title": "ScienceDaily",
+      "url": "https://www.sciencedaily.com/rss/all.xml",
+      "site": "https://www.sciencedaily.com",
+      "description": "The latest research news across every field.",
+      "category": "Science",
+      "region": "global"
+    },
+    {
+      "title": "BBC News — Science",
+      "url": "https://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
+      "site": "https://www.bbc.co.uk/news",
+      "description": "Science and environment headlines from the BBC.",
+      "category": "Science",
+      "region": "uk"
+    },
+    {
+      "title": "NASA",
+      "url": "https://www.nasa.gov/feed/",
+      "site": "https://www.nasa.gov",
+      "description": "Missions, discoveries and news from NASA.",
+      "category": "Science",
+      "region": "us"
+    },
+    {
+      "title": "Space.com",
+      "url": "https://www.space.com/feeds/all",
+      "site": "https://www.space.com",
+      "description": "Space exploration, astronomy and skywatching.",
+      "category": "Science",
+      "region": "global"
+    },
+    {
+      "title": "BBC News — Business",
+      "url": "https://feeds.bbci.co.uk/news/business/rss.xml",
+      "site": "https://www.bbc.co.uk/news",
+      "description": "Business and economy headlines from the BBC.",
+      "category": "Business",
+      "region": "uk"
+    },
+    {
+      "title": "CNBC — Top News",
+      "url": "https://www.cnbc.com/id/100003114/device/rss/rss.html",
+      "site": "https://www.cnbc.com",
+      "description": "Markets, business and finance news.",
+      "category": "Business",
+      "region": "us"
+    },
+    {
+      "title": "ABC Grandstand Sport",
+      "url": "https://www.abc.net.au/news/feed/2942460/rss.xml",
+      "site": "https://www.abc.net.au/news/sport",
+      "description": "Australian sport news from the ABC.",
+      "category": "Sport",
+      "region": "au"
+    },
+    {
+      "title": "BBC Sport",
+      "url": "https://feeds.bbci.co.uk/sport/rss.xml",
+      "site": "https://www.bbc.co.uk/sport",
+      "description": "Football, cricket, rugby, F1 and more.",
+      "category": "Sport",
+      "region": "uk"
+    },
+    {
+      "title": "ESPN",
+      "url": "https://www.espn.com/espn/rss/news",
+      "site": "https://www.espn.com",
+      "description": "Top sports headlines from ESPN.",
+      "category": "Sport",
+      "region": "us"
+    },
+    {
+      "title": "Variety",
+      "url": "https://variety.com/feed/",
+      "site": "https://variety.com",
+      "description": "Film, TV and entertainment industry news.",
+      "category": "Culture",
+      "region": "us"
+    },
+    {
+      "title": "Pitchfork — News",
+      "url": "https://pitchfork.com/rss/news/",
+      "site": "https://pitchfork.com",
+      "description": "Music news, new releases and tours.",
+      "category": "Culture",
+      "region": "us"
+    },
+    {
+      "title": "Atlas Obscura",
+      "url": "https://www.atlasobscura.com/feeds/latest",
+      "site": "https://www.atlasobscura.com",
+      "description": "The world's hidden wonders and curious places.",
+      "category": "Culture",
+      "region": "global"
+    },
+    {
+      "title": "Polygon",
+      "url": "https://www.polygon.com/rss/index.xml",
+      "site": "https://www.polygon.com",
+      "description": "Video games, tabletop and pop culture.",
+      "category": "Gaming",
+      "region": "us"
+    },
+    {
+      "title": "Rock Paper Shotgun",
+      "url": "https://www.rockpapershotgun.com/feed",
+      "site": "https://www.rockpapershotgun.com",
+      "description": "PC gaming news, reviews and features.",
+      "category": "Gaming",
+      "region": "uk"
+    },
+    {
+      "title": "Carbon Brief",
+      "url": "https://www.carbonbrief.org/feed/",
+      "site": "https://www.carbonbrief.org",
+      "description": "Climate science and energy policy, fact-checked.",
+      "category": "Environment",
+      "region": "uk"
+    },
+    {
+      "title": "Grist",
+      "url": "https://grist.org/feed/",
+      "site": "https://grist.org",
+      "description": "Climate solutions and environmental justice.",
+      "category": "Environment",
+      "region": "us"
+    },
+    {
+      "title": "STAT",
+      "url": "https://www.statnews.com/feed/",
+      "site": "https://www.statnews.com",
+      "description": "Health, medicine and life sciences reporting.",
+      "category": "Health",
+      "region": "us"
+    },
+    {
+      "title": "Krebs on Security",
+      "url": "https://krebsonsecurity.com/feed/",
+      "site": "https://krebsonsecurity.com",
+      "description": "Investigative cybersecurity journalism.",
+      "category": "Security",
+      "region": "global"
+    },
+    {
+      "title": "The Hacker News",
+      "url": "https://feeds.feedburner.com/TheHackersNews",
+      "site": "https://thehackernews.com",
+      "description": "Cybersecurity news, breaches and vulnerabilities.",
+      "category": "Security",
+      "region": "global"
+    },
+    {
+      "title": "Dezeen",
+      "url": "https://www.dezeen.com/feed/",
+      "site": "https://www.dezeen.com",
+      "description": "Architecture, interiors and design.",
+      "category": "Design",
+      "region": "global"
+    },
+    {
+      "title": "Smashing Magazine",
+      "url": "https://www.smashingmagazine.com/feed/",
+      "site": "https://www.smashingmagazine.com",
+      "description": "Web design and front-end development.",
+      "category": "Design",
+      "region": "global"
+    },
+    {
+      "title": "Eater",
+      "url": "https://www.eater.com/rss/index.xml",
+      "site": "https://www.eater.com",
+      "description": "Restaurants, food culture and dining news.",
+      "category": "Food",
+      "region": "us"
+    },
+    {
+      "title": "Bon Appétit",
+      "url": "https://www.bonappetit.com/feed/rss",
+      "site": "https://www.bonappetit.com",
+      "description": "Recipes, cooking tips and food stories.",
+      "category": "Food",
+      "region": "us"
+    },
+    {
+      "title": "Lifehacker",
+      "url": "https://lifehacker.com/feed/rss",
+      "site": "https://lifehacker.com",
+      "description": "Tips and tricks for getting things done.",
+      "category": "Lifestyle",
+      "region": "us"
+    },
+    {
+      "title": "The Drive",
+      "url": "https://www.thedrive.com/feed",
+      "site": "https://www.thedrive.com",
+      "description": "Cars, motorsport and automotive culture.",
+      "category": "Lifestyle",
+      "region": "us"
+    }
+  ]
+}

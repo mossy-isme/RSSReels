@@ -1,6 +1,6 @@
 import type { SQLiteDatabase } from "expo-sqlite";
 
-const SCHEMA_VERSION = 1;
+const SCHEMA_VERSION = 2;
 
 export async function migrateDbIfNeeded(db: SQLiteDatabase): Promise<void> {
   await db.execAsync("PRAGMA foreign_keys = ON");
@@ -14,7 +14,8 @@ export async function migrateDbIfNeeded(db: SQLiteDatabase): Promise<void> {
     return;
   }
 
-  await db.execAsync(`
+  if (currentVersion < 1) {
+    await db.execAsync(`
     PRAGMA journal_mode = WAL;
 
     CREATE TABLE IF NOT EXISTS feeds (
@@ -52,6 +53,18 @@ export async function migrateDbIfNeeded(db: SQLiteDatabase): Promise<void> {
     CREATE INDEX IF NOT EXISTS idx_articles_seen_published
       ON articles(seen, published_at DESC);
   `);
+  }
+
+  if (currentVersion < 2) {
+    // Small key/value store, e.g. the cached Explore feed directory.
+    await db.execAsync(`
+      CREATE TABLE IF NOT EXISTS kv (
+        key TEXT PRIMARY KEY,
+        value TEXT NOT NULL,
+        updated_at INTEGER NOT NULL
+      );
+    `);
+  }
 
   await db.execAsync(`PRAGMA user_version = ${SCHEMA_VERSION}`);
 }

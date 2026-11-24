@@ -1,3 +1,4 @@
+import { useFocusEffect } from "expo-router";
 import { useSQLiteContext } from "expo-sqlite";
 import { useCallback, useEffect, useRef, useState } from "react";
 
@@ -42,6 +43,20 @@ export function useReelArticles() {
     }
     load();
   }, [load, refresh]);
+
+  // Re-query local articles when returning to the reel, so feeds added on
+  // Explore or Settings appear without a network refresh. Skip the first
+  // focus: the mount effect above already loads.
+  const hasFocusedRef = useRef(false);
+  useFocusEffect(
+    useCallback(() => {
+      if (!hasFocusedRef.current) {
+        hasFocusedRef.current = true;
+        return;
+      }
+      load();
+    }, [load]),
+  );
 
   return { articles, isLoading, isRefreshing, refresh, showSeen, setShowSeen };
 }

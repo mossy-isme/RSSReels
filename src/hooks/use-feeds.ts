@@ -1,5 +1,6 @@
+import { useFocusEffect } from "expo-router";
 import { useSQLiteContext } from "expo-sqlite";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 
 import { upsertArticles } from "@/lib/articles-repo";
 import { discoverFeedUrl } from "@/lib/discover-feed";
@@ -37,9 +38,13 @@ export function useFeeds() {
     setFeeds(await listFeeds(db));
   }, [db]);
 
-  useEffect(() => {
-    listFeeds(db).then(setFeeds);
-  }, [db]);
+  // Reload whenever the screen gains focus, so a feed added on one tab
+  // (e.g. Explore) shows up on the others (e.g. Settings).
+  useFocusEffect(
+    useCallback(() => {
+      listFeeds(db).then(setFeeds);
+    }, [db]),
+  );
 
   const addFeed = useCallback(
     async (inputUrl: string): Promise<AddFeedResult> => {
