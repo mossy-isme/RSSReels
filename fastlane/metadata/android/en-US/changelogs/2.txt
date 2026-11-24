@@ -1,0 +1,5 @@
+New Explore tab: browse a curated directory of news, tech, science, sport and culture feeds, filter by topic and region, and preview a feed's latest headlines before adding it. You can also paste any website address to find its feed.
+
+Fixed apostrophes, quotes and dashes showing up as codes like &#8217; in article titles and summaries.
+
+Settings now shows the app version.
