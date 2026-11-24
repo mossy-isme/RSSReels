@@ -1,6 +1,6 @@
 import type { ParsedArticle } from "@/types/article";
 
-import { firstImageFromHtml, stripHtml } from "@/lib/strip-html";
+import { cleanText, firstImageFromHtml, stripHtml } from "@/lib/strip-html";
 import { parseDate } from "@/lib/xml-utils";
 
 type JsonFeedItem = {
@@ -29,7 +29,7 @@ export function parseJsonFeed(raw: string): { title: string | null; articles: Pa
     const link = item.url ?? "";
     return {
       guid: item.id ?? link,
-      title: item.title ?? "Untitled",
+      title: cleanText(item.title) || "Untitled",
       link,
       summary: stripHtml(item.summary ?? body, 200),
       imageUrl: item.image ?? item.banner_image ?? firstImageFromHtml(item.content_html),
@@ -37,5 +37,5 @@ export function parseJsonFeed(raw: string): { title: string | null; articles: Pa
     };
   });
 
-  return { title: doc.title ?? null, articles };
+  return { title: cleanText(doc.title) || null, articles };
 }

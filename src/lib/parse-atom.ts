@@ -2,7 +2,7 @@ import { XMLParser } from "fast-xml-parser";
 
 import type { ParsedArticle } from "@/types/article";
 
-import { firstImageFromHtml, stripHtml } from "@/lib/strip-html";
+import { cleanText, firstImageFromHtml, stripHtml } from "@/lib/strip-html";
 import { parseDate, textOf, toArray } from "@/lib/xml-utils";
 
 type AtomLink = { "@_href"?: string; "@_rel"?: string };
@@ -34,7 +34,7 @@ export function parseAtom(raw: string): { title: string | null; articles: Parsed
     const link = entryLink(entry);
     return {
       guid: textOf(entry.id) || link,
-      title: textOf(entry.title) || "Untitled",
+      title: cleanText(textOf(entry.title)) || "Untitled",
       link,
       summary: stripHtml(body, 200),
       imageUrl: firstImageFromHtml(body),
@@ -42,5 +42,5 @@ export function parseAtom(raw: string): { title: string | null; articles: Parsed
     };
   });
 
-  return { title: textOf(feed.title) || null, articles };
+  return { title: cleanText(textOf(feed.title)) || null, articles };
 }

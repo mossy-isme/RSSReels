@@ -2,7 +2,7 @@ import { XMLParser } from "fast-xml-parser";
 
 import type { ParsedArticle } from "@/types/article";
 
-import { firstImageFromHtml, stripHtml } from "@/lib/strip-html";
+import { cleanText, firstImageFromHtml, stripHtml } from "@/lib/strip-html";
 import { parseDate, textOf, toArray } from "@/lib/xml-utils";
 
 type Rss2Item = {
@@ -42,7 +42,7 @@ export function parseRss2(raw: string): { title: string | null; articles: Parsed
     const guid = textOf(item.guid) || link;
     return {
       guid,
-      title: textOf(item.title) || "Untitled",
+      title: cleanText(textOf(item.title)) || "Untitled",
       link,
       summary: stripHtml(description, 200),
       imageUrl: itemImage(item, description),
@@ -50,5 +50,5 @@ export function parseRss2(raw: string): { title: string | null; articles: Parsed
     };
   });
 
-  return { title: textOf(channel.title) || null, articles };
+  return { title: cleanText(textOf(channel.title)) || null, articles };
 }
